@@ -476,6 +476,30 @@
 			<string>string.quoted</string>
 		</dict>
 		<dict>
+		<key>comment</key>
+			<string>
+				As per https://sourceware.org/binutils/docs/as/Chars.html : 
+				"A single character may be written as a single quote immediately followed by that character."
+
+				I used the easy way of delimiting quotes.
+			</string>
+			<key>name</key>
+			<string>string.quoted.single</string>
+			<key>begin</key>
+			<string>'</string>
+			<key>end</key>
+			<string>'</string>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>name</key>
+					<string>constant.character.escape.asm</string>
+					<key>match</key>
+					<string>\\.</string>
+				</dict>
+			</array>
+		</dict>
+		<dict>
 			<key>comment</key>
 			<string>Registers case insensitive. Not sure about some of these (Like the last few). I found some on Wikipedia.</string>
 			<key>match</key>
